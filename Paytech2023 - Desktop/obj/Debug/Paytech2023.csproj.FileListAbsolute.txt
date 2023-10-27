@@ -1,0 +1,11 @@
+C:\Users\mateu\source\repos\Paytech2023\bin\Debug\Paytech2023.exe.config
+C:\Users\mateu\source\repos\Paytech2023\bin\Debug\Paytech2023.exe
+C:\Users\mateu\source\repos\Paytech2023\bin\Debug\Paytech2023.pdb
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.csproj.AssemblyReference.cache
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.Properties.Resources.resources
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.csproj.GenerateResource.cache
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.csproj.CoreCompileInputs.cache
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.exe
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.pdb
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.fmlLogin.resources
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.fmlHome.resources
