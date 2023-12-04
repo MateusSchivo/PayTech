@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Paytech2023
 {
@@ -17,9 +18,23 @@ namespace Paytech2023
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCad_Click(object sender, EventArgs e)
         {
+            fmlCad telaCad = new fmlCad();
 
+            telaCad.Show();
+
+            this.Hide();
         }
+        private void btnFP_Click(object sender, EventArgs e)
+        {
+            fmlFP telaFP = new fmlFP();
+
+            telaFP.Show();
+
+            this.Hide();
+        }
+
+
     }
 }

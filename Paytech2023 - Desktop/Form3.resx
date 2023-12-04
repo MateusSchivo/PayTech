@@ -117,11 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="fmlCadBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>209, 17</value>
+  </metadata>
+  <metadata name="pAYTECH_OFICIALDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="fmlCadTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>379, 17</value>
+  </metadata>
+  <metadata name="pAYTECHDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>541, 17</value>
+  </metadata>
+  <metadata name="cADASTROFUNCIONARIOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>685, 17</value>
+  </metadata>
+  <metadata name="cADASTRO_FUNCIONARIOTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>953, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAC0AAAAgACAIAAAA6nSXGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAA/7JJREFUeF7s/fnXvWlV3Qv7b7waG9qqAqqgOosyvGeM9+TkPSfnjPHmnJxEjTFo
+        vwAADr8BOAVTJAAA/7JJREFUeF7s/fnXvWlV3Qv7b7waG9qqAqqgOosyvGeM9+TkPSfnjPHmnJxEjTFo
         1AQUlcaO6NEoojQiSE+h9K0irTT2fR8TmxgUNFGjVFEF2Mbf37XWvK55z3td997Ptwow9X2Y3/EZy7nm
         Wtd1N892jL03q+79aTc84tobHl5ARKRDk75W1SH0IQ7b1LySfnK+SnRP3fZw+WpyFTXSNa6wCrQE6LN6
         2BasfnM01d1UQ5xn3YeRJWhNVTBVs+kQQH11NFUTrA5YlwM1qdcUcAmrcGjS16o6hD7EYZuaV9JPzleJ

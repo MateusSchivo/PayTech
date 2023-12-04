@@ -28,20 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmlLogin));
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LBLsenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.pAYTECH_OFICIALDataSet = new Paytech2023.PAYTECH_OFICIALDataSet();
+            this.fmlLoginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fmlLoginTableAdapter = new Paytech2023.PAYTECH_OFICIALDataSetTableAdapters.fmlLoginTableAdapter();
+            this.fmlCadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fmlCadTableAdapter = new Paytech2023.PAYTECH_OFICIALDataSetTableAdapters.fmlCadTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.pAYTECH_OFICIALDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fmlLoginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fmlCadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLogin
             // 
+            this.txtLogin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtEmail", true));
             this.txtLogin.Location = new System.Drawing.Point(73, 207);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(266, 20);
             this.txtLogin.TabIndex = 0;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // label1
             // 
@@ -68,11 +79,13 @@
             // 
             // txtSenha
             // 
+            this.txtSenha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtCPF", true));
             this.txtSenha.Location = new System.Drawing.Point(73, 264);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(266, 20);
             this.txtSenha.TabIndex = 2;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // btnLogin
             // 
@@ -84,6 +97,29 @@
             this.btnLogin.Text = "Confirmar";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // pAYTECH_OFICIALDataSet
+            // 
+            this.pAYTECH_OFICIALDataSet.DataSetName = "PAYTECH_OFICIALDataSet";
+            this.pAYTECH_OFICIALDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fmlLoginBindingSource
+            // 
+            this.fmlLoginBindingSource.DataMember = "fmlLogin";
+            this.fmlLoginBindingSource.DataSource = this.pAYTECH_OFICIALDataSet;
+            // 
+            // fmlLoginTableAdapter
+            // 
+            this.fmlLoginTableAdapter.ClearBeforeFill = true;
+            // 
+            // fmlCadBindingSource
+            // 
+            this.fmlCadBindingSource.DataMember = "fmlCad";
+            this.fmlCadBindingSource.DataSource = this.pAYTECH_OFICIALDataSet;
+            // 
+            // fmlCadTableAdapter
+            // 
+            this.fmlCadTableAdapter.ClearBeforeFill = true;
             // 
             // fmlLogin
             // 
@@ -101,6 +137,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "fmlLogin";
             this.Text = "PaytechLogin";
+            this.Load += new System.EventHandler(this.fmlLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pAYTECH_OFICIALDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fmlLoginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fmlCadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,6 +153,11 @@
         private System.Windows.Forms.Label LBLsenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnLogin;
+        private PAYTECH_OFICIALDataSet pAYTECH_OFICIALDataSet;
+        private System.Windows.Forms.BindingSource fmlLoginBindingSource;
+        private PAYTECH_OFICIALDataSetTableAdapters.fmlLoginTableAdapter fmlLoginTableAdapter;
+        private System.Windows.Forms.BindingSource fmlCadBindingSource;
+        private PAYTECH_OFICIALDataSetTableAdapters.fmlCadTableAdapter fmlCadTableAdapter;
     }
 }
 

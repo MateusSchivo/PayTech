@@ -41,8 +41,8 @@
             this.txtFaltas = new System.Windows.Forms.TextBox();
             this.lblNomeFP = new System.Windows.Forms.Label();
             this.txtNomeFP = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblDT = new System.Windows.Forms.Label();
+            this.txtDT = new System.Windows.Forms.TextBox();
             this.lblFerias = new System.Windows.Forms.Label();
             this.txtFerias = new System.Windows.Forms.TextBox();
             this.lblINSS = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.lblEmaFP = new System.Windows.Forms.Label();
             this.txtEmaFP = new System.Windows.Forms.TextBox();
             this.btnGerar = new System.Windows.Forms.Button();
-            this.btnVoltarc = new System.Windows.Forms.Button();
+            this.btnVoltarFP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblBen
@@ -69,6 +69,7 @@
             this.txtBen.Name = "txtBen";
             this.txtBen.Size = new System.Drawing.Size(167, 20);
             this.txtBen.TabIndex = 43;
+            this.txtBen.TextChanged += new System.EventHandler(this.txtBen_TextChanged);
             // 
             // lblAtraso
             // 
@@ -86,6 +87,7 @@
             this.txtAtraso.Name = "txtAtraso";
             this.txtAtraso.Size = new System.Drawing.Size(167, 20);
             this.txtAtraso.TabIndex = 41;
+            this.txtAtraso.TextChanged += new System.EventHandler(this.txtAtraso_TextChanged);
             // 
             // lblAtest
             // 
@@ -103,6 +105,7 @@
             this.txtAtest.Name = "txtAtest";
             this.txtAtest.Size = new System.Drawing.Size(167, 20);
             this.txtAtest.TabIndex = 39;
+            this.txtAtest.TextChanged += new System.EventHandler(this.txtAtest_TextChanged);
             // 
             // lblSalFP
             // 
@@ -120,6 +123,7 @@
             this.txtSalFP.Name = "txtSalFP";
             this.txtSalFP.Size = new System.Drawing.Size(167, 20);
             this.txtSalFP.TabIndex = 37;
+            this.txtSalFP.TextChanged += new System.EventHandler(this.txtSalFP_TextChanged);
             // 
             // lblFaltas
             // 
@@ -137,6 +141,7 @@
             this.txtFaltas.Name = "txtFaltas";
             this.txtFaltas.Size = new System.Drawing.Size(167, 20);
             this.txtFaltas.TabIndex = 35;
+            this.txtFaltas.TextChanged += new System.EventHandler(this.txtFaltas_TextChanged);
             // 
             // lblNomeFP
             // 
@@ -154,23 +159,25 @@
             this.txtNomeFP.Name = "txtNomeFP";
             this.txtNomeFP.Size = new System.Drawing.Size(167, 20);
             this.txtNomeFP.TabIndex = 33;
+            this.txtNomeFP.TextChanged += new System.EventHandler(this.txtNomeFP_TextChanged);
             // 
-            // label1
+            // lblDT
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSalmon;
-            this.label1.Location = new System.Drawing.Point(599, 276);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "13o Salário";
+            this.lblDT.AutoSize = true;
+            this.lblDT.BackColor = System.Drawing.Color.LightSalmon;
+            this.lblDT.Location = new System.Drawing.Point(599, 276);
+            this.lblDT.Name = "lblDT";
+            this.lblDT.Size = new System.Drawing.Size(60, 13);
+            this.lblDT.TabIndex = 50;
+            this.lblDT.Text = "13o Salário";
             // 
-            // textBox1
+            // txtDT
             // 
-            this.textBox1.Location = new System.Drawing.Point(598, 293);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 49;
+            this.txtDT.Location = new System.Drawing.Point(598, 293);
+            this.txtDT.Name = "txtDT";
+            this.txtDT.Size = new System.Drawing.Size(167, 20);
+            this.txtDT.TabIndex = 49;
+            this.txtDT.TextChanged += new System.EventHandler(this.txtDT_TextChanged);
             // 
             // lblFerias
             // 
@@ -188,6 +195,7 @@
             this.txtFerias.Name = "txtFerias";
             this.txtFerias.Size = new System.Drawing.Size(167, 20);
             this.txtFerias.TabIndex = 47;
+            this.txtFerias.TextChanged += new System.EventHandler(this.txtFerias_TextChanged);
             // 
             // lblINSS
             // 
@@ -205,6 +213,7 @@
             this.txtINSS.Name = "txtINSS";
             this.txtINSS.Size = new System.Drawing.Size(167, 20);
             this.txtINSS.TabIndex = 45;
+            this.txtINSS.TextChanged += new System.EventHandler(this.txtINSS_TextChanged);
             // 
             // lblEmaFP
             // 
@@ -223,6 +232,7 @@
             this.txtEmaFP.Name = "txtEmaFP";
             this.txtEmaFP.Size = new System.Drawing.Size(245, 20);
             this.txtEmaFP.TabIndex = 51;
+            this.txtEmaFP.TextChanged += new System.EventHandler(this.txtEmaFP_TextChanged);
             // 
             // btnGerar
             // 
@@ -233,16 +243,18 @@
             this.btnGerar.TabIndex = 53;
             this.btnGerar.Text = "Gerar Folha";
             this.btnGerar.UseVisualStyleBackColor = false;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
-            // btnVoltarc
+            // btnVoltarFP
             // 
-            this.btnVoltarc.BackColor = System.Drawing.Color.LightSalmon;
-            this.btnVoltarc.Location = new System.Drawing.Point(-1, 153);
-            this.btnVoltarc.Name = "btnVoltarc";
-            this.btnVoltarc.Size = new System.Drawing.Size(214, 23);
-            this.btnVoltarc.TabIndex = 54;
-            this.btnVoltarc.Text = "Voltar";
-            this.btnVoltarc.UseVisualStyleBackColor = false;
+            this.btnVoltarFP.BackColor = System.Drawing.Color.LightSalmon;
+            this.btnVoltarFP.Location = new System.Drawing.Point(-1, 153);
+            this.btnVoltarFP.Name = "btnVoltarFP";
+            this.btnVoltarFP.Size = new System.Drawing.Size(214, 23);
+            this.btnVoltarFP.TabIndex = 54;
+            this.btnVoltarFP.Text = "Voltar";
+            this.btnVoltarFP.UseVisualStyleBackColor = false;
+            this.btnVoltarFP.Click += new System.EventHandler(this.btnVoltarFP_Click);
             // 
             // fmlFP
             // 
@@ -251,12 +263,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnVoltarc);
+            this.Controls.Add(this.btnVoltarFP);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.lblEmaFP);
             this.Controls.Add(this.txtEmaFP);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblDT);
+            this.Controls.Add(this.txtDT);
             this.Controls.Add(this.lblFerias);
             this.Controls.Add(this.txtFerias);
             this.Controls.Add(this.lblINSS);
@@ -294,8 +306,8 @@
         private System.Windows.Forms.TextBox txtFaltas;
         private System.Windows.Forms.Label lblNomeFP;
         private System.Windows.Forms.TextBox txtNomeFP;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblDT;
+        private System.Windows.Forms.TextBox txtDT;
         private System.Windows.Forms.Label lblFerias;
         private System.Windows.Forms.TextBox txtFerias;
         private System.Windows.Forms.Label lblINSS;
@@ -303,6 +315,6 @@
         private System.Windows.Forms.Label lblEmaFP;
         private System.Windows.Forms.TextBox txtEmaFP;
         private System.Windows.Forms.Button btnGerar;
-        private System.Windows.Forms.Button btnVoltarc;
+        private System.Windows.Forms.Button btnVoltarFP;
     }
 }

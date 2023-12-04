@@ -42,6 +42,7 @@
             this.btnCad.TabIndex = 0;
             this.btnCad.Text = "Cadastro de Funcionário";
             this.btnCad.UseVisualStyleBackColor = false;
+            this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
             // btnFP
             // 
@@ -52,7 +53,7 @@
             this.btnFP.TabIndex = 1;
             this.btnFP.Text = "Folha de Pagamento";
             this.btnFP.UseVisualStyleBackColor = false;
-            this.btnFP.Click += new System.EventHandler(this.button2_Click);
+            this.btnFP.Click += new System.EventHandler(this.btnFP_Click);
             // 
             // fmlHome
             // 

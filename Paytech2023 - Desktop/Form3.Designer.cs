@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmlCad));
             this.txtNomec = new System.Windows.Forms.TextBox();
+            this.fmlCadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pAYTECH_OFICIALDataSet = new Paytech2023.PAYTECH_OFICIALDataSet();
             this.lblNomec = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.txtData = new System.Windows.Forms.TextBox();
@@ -48,7 +51,7 @@
             this.lblSal = new System.Windows.Forms.Label();
             this.txtSal = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblNum = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -65,15 +68,34 @@
             this.txtCom = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnVoltarc = new System.Windows.Forms.Button();
+            this.fmlCadTableAdapter = new Paytech2023.PAYTECH_OFICIALDataSetTableAdapters.fmlCadTableAdapter();
+            this.pAYTECHDataSet = new Paytech2023.PAYTECHDataSet();
+            this.cADASTROFUNCIONARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cADASTRO_FUNCIONARIOTableAdapter = new Paytech2023.PAYTECHDataSetTableAdapters.CADASTRO_FUNCIONARIOTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.fmlCadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAYTECH_OFICIALDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAYTECHDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cADASTROFUNCIONARIOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomec
             // 
+            this.txtNomec.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtNome", true));
             this.txtNomec.Location = new System.Drawing.Point(258, 82);
             this.txtNomec.Name = "txtNomec";
             this.txtNomec.Size = new System.Drawing.Size(167, 20);
             this.txtNomec.TabIndex = 1;
             this.txtNomec.TextChanged += new System.EventHandler(this.txtNomec_TextChanged);
+            // 
+            // fmlCadBindingSource
+            // 
+            this.fmlCadBindingSource.DataMember = "fmlCad";
+            this.fmlCadBindingSource.DataSource = this.pAYTECH_OFICIALDataSet;
+            // 
+            // pAYTECH_OFICIALDataSet
+            // 
+            this.pAYTECH_OFICIALDataSet.DataSetName = "PAYTECH_OFICIALDataSet";
+            this.pAYTECH_OFICIALDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblNomec
             // 
@@ -97,10 +119,12 @@
             // 
             // txtData
             // 
+            this.txtData.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtData", true));
             this.txtData.Location = new System.Drawing.Point(258, 133);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(167, 20);
             this.txtData.TabIndex = 3;
+            this.txtData.TextChanged += new System.EventHandler(this.txtData_TextChanged);
             // 
             // lblGen
             // 
@@ -114,10 +138,12 @@
             // 
             // txtGen
             // 
+            this.txtGen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtGen", true));
             this.txtGen.Location = new System.Drawing.Point(258, 181);
             this.txtGen.Name = "txtGen";
             this.txtGen.Size = new System.Drawing.Size(167, 20);
             this.txtGen.TabIndex = 5;
+            this.txtGen.TextChanged += new System.EventHandler(this.txtGen_TextChanged);
             // 
             // lblRG
             // 
@@ -131,10 +157,12 @@
             // 
             // txtRG
             // 
+            this.txtRG.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtRG", true));
             this.txtRG.Location = new System.Drawing.Point(258, 229);
             this.txtRG.Name = "txtRG";
             this.txtRG.Size = new System.Drawing.Size(167, 20);
             this.txtRG.TabIndex = 7;
+            this.txtRG.TextChanged += new System.EventHandler(this.txtRG_TextChanged);
             // 
             // lblTel
             // 
@@ -148,10 +176,12 @@
             // 
             // txtTel
             // 
+            this.txtTel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtTel", true));
             this.txtTel.Location = new System.Drawing.Point(431, 229);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(167, 20);
             this.txtTel.TabIndex = 15;
+            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // lblEC
             // 
@@ -165,10 +195,12 @@
             // 
             // txtEC
             // 
+            this.txtEC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtEC", true));
             this.txtEC.Location = new System.Drawing.Point(431, 181);
             this.txtEC.Name = "txtEC";
             this.txtEC.Size = new System.Drawing.Size(167, 20);
             this.txtEC.TabIndex = 13;
+            this.txtEC.TextChanged += new System.EventHandler(this.txtEC_TextChanged);
             // 
             // lblEmail
             // 
@@ -182,10 +214,12 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtEmail", true));
             this.txtEmail.Location = new System.Drawing.Point(431, 133);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(167, 20);
             this.txtEmail.TabIndex = 11;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblCPF
             // 
@@ -199,10 +233,12 @@
             // 
             // txtCPF
             // 
+            this.txtCPF.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtCPF", true));
             this.txtCPF.Location = new System.Drawing.Point(431, 82);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(167, 20);
             this.txtCPF.TabIndex = 9;
+            this.txtCPF.TextChanged += new System.EventHandler(this.txtCPF_TextChanged);
             // 
             // lblSal
             // 
@@ -216,10 +252,12 @@
             // 
             // txtSal
             // 
+            this.txtSal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtSal", true));
             this.txtSal.Location = new System.Drawing.Point(604, 133);
             this.txtSal.Name = "txtSal";
             this.txtSal.Size = new System.Drawing.Size(167, 20);
             this.txtSal.TabIndex = 19;
+            this.txtSal.TextChanged += new System.EventHandler(this.txtSal_TextChanged);
             // 
             // lblCargo
             // 
@@ -231,12 +269,14 @@
             this.lblCargo.TabIndex = 18;
             this.lblCargo.Text = "Cargo";
             // 
-            // textBox20
+            // txtCargo
             // 
-            this.textBox20.Location = new System.Drawing.Point(604, 82);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(167, 20);
-            this.textBox20.TabIndex = 17;
+            this.txtCargo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtCargo", true));
+            this.txtCargo.Location = new System.Drawing.Point(604, 82);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(167, 20);
+            this.txtCargo.TabIndex = 17;
+            this.txtCargo.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
             // lblNum
             // 
@@ -250,10 +290,12 @@
             // 
             // txtNum
             // 
+            this.txtNum.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtNum", true));
             this.txtNum.Location = new System.Drawing.Point(604, 352);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(167, 20);
             this.txtNum.TabIndex = 31;
+            this.txtNum.TextChanged += new System.EventHandler(this.txtNum_TextChanged);
             // 
             // lblEstado
             // 
@@ -267,10 +309,12 @@
             // 
             // txtEstado
             // 
+            this.txtEstado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtEstado", true));
             this.txtEstado.Location = new System.Drawing.Point(604, 301);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(167, 20);
             this.txtEstado.TabIndex = 29;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // lblEnd
             // 
@@ -284,10 +328,12 @@
             // 
             // txtEnd
             // 
+            this.txtEnd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtEnd", true));
             this.txtEnd.Location = new System.Drawing.Point(431, 352);
             this.txtEnd.Name = "txtEnd";
             this.txtEnd.Size = new System.Drawing.Size(167, 20);
             this.txtEnd.TabIndex = 27;
+            this.txtEnd.TextChanged += new System.EventHandler(this.txtEnd_TextChanged);
             // 
             // lblCid
             // 
@@ -301,10 +347,12 @@
             // 
             // txtCid
             // 
+            this.txtCid.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtCid", true));
             this.txtCid.Location = new System.Drawing.Point(431, 301);
             this.txtCid.Name = "txtCid";
             this.txtCid.Size = new System.Drawing.Size(167, 20);
             this.txtCid.TabIndex = 25;
+            this.txtCid.TextChanged += new System.EventHandler(this.txtCid_TextChanged);
             // 
             // lblBairro
             // 
@@ -318,10 +366,12 @@
             // 
             // txtBairro
             // 
+            this.txtBairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtBairro", true));
             this.txtBairro.Location = new System.Drawing.Point(258, 352);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(167, 20);
             this.txtBairro.TabIndex = 23;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // lblCEP
             // 
@@ -335,10 +385,12 @@
             // 
             // txtCEP
             // 
+            this.txtCEP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fmlCadBindingSource, "txtCEP", true));
             this.txtCEP.Location = new System.Drawing.Point(258, 301);
             this.txtCEP.Name = "txtCEP";
             this.txtCEP.Size = new System.Drawing.Size(167, 20);
             this.txtCEP.TabIndex = 21;
+            this.txtCEP.TextChanged += new System.EventHandler(this.txtCEP_TextChanged);
             // 
             // lblCom
             // 
@@ -352,10 +404,12 @@
             // 
             // txtCom
             // 
+            this.txtCom.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.fmlCadBindingSource, "txtComplemento", true));
             this.txtCom.Location = new System.Drawing.Point(431, 393);
             this.txtCom.Name = "txtCom";
             this.txtCom.Size = new System.Drawing.Size(167, 20);
             this.txtCom.TabIndex = 33;
+            this.txtCom.TextChanged += new System.EventHandler(this.txtCom_TextChanged);
             // 
             // btnSalvar
             // 
@@ -366,6 +420,7 @@
             this.btnSalvar.TabIndex = 35;
             this.btnSalvar.Text = "Cadastrar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnVoltarc
             // 
@@ -376,7 +431,25 @@
             this.btnVoltarc.TabIndex = 36;
             this.btnVoltarc.Text = "Voltar";
             this.btnVoltarc.UseVisualStyleBackColor = false;
-            this.btnVoltarc.Click += new System.EventHandler(this.btnCad_Click);
+            this.btnVoltarc.Click += new System.EventHandler(this.btnVoltarc_Click);
+            // 
+            // fmlCadTableAdapter
+            // 
+            this.fmlCadTableAdapter.ClearBeforeFill = true;
+            // 
+            // pAYTECHDataSet
+            // 
+            this.pAYTECHDataSet.DataSetName = "PAYTECHDataSet";
+            this.pAYTECHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cADASTROFUNCIONARIOBindingSource
+            // 
+            this.cADASTROFUNCIONARIOBindingSource.DataMember = "CADASTRO_FUNCIONARIO";
+            this.cADASTROFUNCIONARIOBindingSource.DataSource = this.pAYTECHDataSet;
+            // 
+            // cADASTRO_FUNCIONARIOTableAdapter
+            // 
+            this.cADASTRO_FUNCIONARIOTableAdapter.ClearBeforeFill = true;
             // 
             // fmlCad
             // 
@@ -402,7 +475,7 @@
             this.Controls.Add(this.lblSal);
             this.Controls.Add(this.txtSal);
             this.Controls.Add(this.lblCargo);
-            this.Controls.Add(this.textBox20);
+            this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.lblTel);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.lblEC);
@@ -421,6 +494,11 @@
             this.Controls.Add(this.txtNomec);
             this.Name = "fmlCad";
             this.Text = "PaytechCadastro";
+            this.Load += new System.EventHandler(this.fmlCad_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.fmlCadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAYTECH_OFICIALDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pAYTECHDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cADASTROFUNCIONARIOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,7 +545,7 @@
         private System.Windows.Forms.Label lblSal;
         private System.Windows.Forms.TextBox txtSal;
         private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label lblEstado;
@@ -484,5 +562,11 @@
         private System.Windows.Forms.TextBox txtCom;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnVoltarc;
+        private PAYTECH_OFICIALDataSet pAYTECH_OFICIALDataSet;
+        private System.Windows.Forms.BindingSource fmlCadBindingSource;
+        private PAYTECH_OFICIALDataSetTableAdapters.fmlCadTableAdapter fmlCadTableAdapter;
+        private PAYTECHDataSet pAYTECHDataSet;
+        private System.Windows.Forms.BindingSource cADASTROFUNCIONARIOBindingSource;
+        private PAYTECHDataSetTableAdapters.CADASTRO_FUNCIONARIOTableAdapter cADASTRO_FUNCIONARIOTableAdapter;
     }
 }

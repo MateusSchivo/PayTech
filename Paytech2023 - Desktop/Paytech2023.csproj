@@ -70,6 +70,16 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="PAYTECHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAYTECHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PAYTECH_OFICIALDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PAYTECH_OFICIALDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -93,6 +103,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="PAYTECHDataSet.xsc">
+      <DependentUpon>PAYTECHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PAYTECHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PAYTECHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PAYTECHDataSet.xss">
+      <DependentUpon>PAYTECHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PAYTECH_OFICIALDataSet.xsc">
+      <DependentUpon>PAYTECH_OFICIALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PAYTECH_OFICIALDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PAYTECH_OFICIALDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PAYTECH_OFICIALDataSet.xss">
+      <DependentUpon>PAYTECH_OFICIALDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

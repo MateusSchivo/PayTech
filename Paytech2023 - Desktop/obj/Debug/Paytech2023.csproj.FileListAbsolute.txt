@@ -9,3 +9,5 @@ C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.exe
 C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.pdb
 C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.fmlLogin.resources
 C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.fmlHome.resources
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.fmlCad.resources
+C:\Users\mateu\source\repos\Paytech2023\obj\Debug\Paytech2023.fmlFP.resources
